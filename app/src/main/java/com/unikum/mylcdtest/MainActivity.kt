@@ -12,7 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.lifecycleScope
-import com.brodjag.lcd.BroLcd
+import com.brodjag.lcdlib.BroLcd
 import com.unikum.mylcdtest.ui.theme.MyLcdTestTheme
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.delay
@@ -37,6 +37,7 @@ class MainActivity : ComponentActivity() {
 
         // runAsRoot()
         lifecycleScope.launch(IO) {
+//            BroLcd()
             BroLcd().apply {
                 begin()
                 while (true) {
